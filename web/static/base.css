@@ -1,3 +1,25 @@
 body {
     background-color: rgb(204, 203, 203);
 }
+
+.banner-section{
+    background: url("/static/img/banner.jpg") 50% 0 no-repeat fixed;
+    color: white;
+    text-align: center;
+    height: 900px;
+    padding: 300px 0 0 0;  
+}
+
+#background-section{
+    background: url("/static/img/blue.jpg") 50% 0 no-repeat fixed;
+    color: white;
+    padding: 100px 0;
+    
+}
+#about-section{
+    background: url("/static/img/blue.jpg") 50% 0 no-repeat fixed;
+    color: white;
+    padding: 50px 0;
+    
+}
+

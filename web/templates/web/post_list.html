@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}home{% endblock%}
+{% block content %}
+<!-- banner -->
+<div class="banner-section">
+    <div class="banner-header">
+        <h1 class="display-1">Hello there</h1>
+    </div>
+    <div class="banner-text">
+        <h4 class="display-4">Learn Here</h4>
+    </div>
+</div>
+<!-- main -->
+<div class="container my-5">
+    <div class="main-header">
+        <h1 class="display-2 fw-bolder text-center">POSTS</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for post in post_lists %}
+        <div class="col">
+            <div class="card">
+                <a class="nav-link" href="{{ post.get_absolute_url }}"><img src="{{ post.img.url }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <a class="nav-link px-0" href="{{ post.get_absolute_url }}"><h5 class="card-title">{{ post.title }}</h5></a>
+                    <p class="card-text">{{ post.body|truncatewords:15 }} 
+                        <span>
+                            <a href="{{ post.get_absolute_url }}">READ MORE</a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <h1>No posts yet</h1>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- about -->
+<div class="container my-3  display-5 fw-bolder text-center">
+    <div class="main-header">
+        <h1 class="display-2 fw-bolder text-center">ABOUT US</h1>
+    </div>
+</div>
+<div class="container-fluid my-3" id="about-section">
+        <img class="float-start m-2" src="{% static 'img/about.jpg' %}" alt="...">
+        <p class="lead p-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam illum ipsa amet id voluptas temporibus voluptatum excepturi porro repudiandae aliquid. Ullam doloremque cum praesentium aut iusto commodi, voluptates dolorum quibusdam modi blanditiis, facilis delectus, aliquam beatae? Neque quos excepturi totam accusantium quaerat voluptas, officiis a quibusdam distinctio voluptatum quidem maiores! Animi, ullam iure! Doloribus qui eveniet quaerat, rem sit ab dolorum quis dolor in impedit unde dignissimos? Eveniet iusto rem incidunt distinctio tempora molestiae blanditiis perspiciatis enim, at consequuntur! Quis natus aliquid dicta saepe nam, et quaerat, esse dolores velit mollitia eos accusamus commodi ipsa id obcaecati veritatis officia sequi ipsam dolor facere laborum? Iusto veniam distinctio atque tenetur minima numquam corrupti voluptate impedit? Deleniti soluta iste eos iure, ab numquam officiis libero veniam aspernatur harum ullam ipsa rem dolore earum odit saepe necessitatibus omnis. Cumque, nemo excepturi animi laudantium rerum hic odio magni iure, debitis ullam provident voluptatem voluptate voluptatum repudiandae quas dolorum. Aspernatur, excepturi? Illo nihil corrupti perferendis culpa! Dolorem ut quas numquam commodi iste dicta nam quod nobis architecto, perspiciatis nostrum nesciunt veritatis. Magnam ab temporibus vero praesentium cumque odit, ea ullam cum eius veritatis! Incidunt, est dolore saepe hic laborum blanditiis sint repellendus enim nam. At!
+        </p>
+       
+</div>
+
+<!-- contact -->
+<div class="container my-3  display-5 fw-bolder text-center">
+    <div class="main-header">
+        <h1 class="display-2 fw-bolder text-center">CONTACT US</h1>
+    </div>
+</div>
+<div class="container-fluid my-3" id="about-section">
+        <img class="float-start m-2" src="{% static 'img/about.jpg' %}" alt="...">
+        <p class="lead p-2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam illum ipsa amet id voluptas temporibus voluptatum excepturi porro repudiandae aliquid. Ullam doloremque cum praesentium aut iusto commodi, voluptates dolorum quibusdam modi blanditiis, facilis delectus, aliquam beatae? Neque quos excepturi totam accusantium quaerat voluptas, officiis a quibusdam distinctio voluptatum quidem maiores! Animi, ullam iure! Doloribus qui eveniet quaerat, rem sit ab dolorum quis dolor in impedit unde dignissimos? Eveniet iusto rem incidunt distinctio tempora molestiae blanditiis perspiciatis enim, at consequuntur! Quis natus aliquid dicta saepe nam, et quaerat, esse dolores velit mollitia eos accusamus commodi ipsa id obcaecati veritatis officia sequi ipsam dolor facere laborum? Iusto veniam distinctio atque tenetur minima numquam corrupti voluptate impedit? Deleniti soluta iste eos iure, ab numquam officiis libero veniam aspernatur harum ullam ipsa rem dolore earum odit saepe necessitatibus omnis. Cumque, nemo excepturi animi laudantium rerum hic odio magni iure, debitis ullam provident voluptatem voluptate voluptatum repudiandae quas dolorum. Aspernatur, excepturi? Illo nihil corrupti perferendis culpa! Dolorem ut quas numquam commodi iste dicta nam quod nobis architecto, perspiciatis nostrum nesciunt veritatis. Magnam ab temporibus vero praesentium cumque odit, ea ullam cum eius veritatis! Incidunt, est dolore saepe hic laborum blanditiis sint repellendus enim nam. At!
+        </p>
+       
+</div>
+
+    
+{% endblock %}

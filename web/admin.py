@@ -9,4 +9,5 @@ class AuthorAdmin(admin.ModelAdmin):
     
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('author', 'title', 'slug', 'description','username')
+    list_display = ('author', 'title', 'slug', 'body')
+    prepopulated_fields = {'slug': ('title',)}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}detail{% endblock%}
+{% block content %}
+<div class="container">
+    <div class="row my-5 py-5">
+        <h1 class="display-4 fw-bolder text-center">{{ post.title }}</h1>
+        <div class="col my-3">
+            <img class="float-left m-2" src="{{ post.img.url }}" alt="">
+        </div>
+        <div class="col my-3">
+            <p>{{ post.body }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
